@@ -1,0 +1,57 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\RegisteredApplications]
+"DefaultBrowserRedirector"="Software\\Clients\\StartMenuInternet\\DefaultBrowserRedirector\\Capabilities"
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector]
+@="Default browser redirector"
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\Capabilities]
+"ApplicationName"="Default browser redirector"
+"ApplicationIcon"="%SystemRoot%\\System32\\shell32.dll,13"
+"ApplicationDescription"="Default browser redirector."
+
+; [HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\Capabilities\FileAssociations]
+; ".htm"="DefaultBrowserRedirectorHTML"
+; ".html"="DefaultBrowserRedirectorHTML"
+; ".shtml"="DefaultBrowserRedirectorHTML"
+; ".xht"="DefaultBrowserRedirectorHTML"
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\Capabilities\Startmenu]
+"StartMenuInternet"=""
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\Capabilities\URLAssociations]
+"http"="DefaultBrowserRedirectorHTML"
+"https"="DefaultBrowserRedirectorHTML"
+"ftp"="DefaultBrowserRedirectorHTML"
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\DefaultIcon]
+@="%SystemRoot%\\System32\\shell32.dll,13"
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\shell]
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\shell\open]
+
+[HKEY_CURRENT_USER\Software\Clients\StartMenuInternet\DefaultBrowserRedirector\shell\open\command]
+@="pyw -c \"exec('import os\\nimport subprocess\\nsubprocess.Popen([\\\"pyw\\\", os.path.expandvars(\\\"%%AppData%%\\\\Default browser redirector\\\\default_browser_redirector.pyw\\\")], creationflags=subprocess.CREATE_NO_WINDOW)')\""
+
+[HKEY_CURRENT_USER\Software\Classes\DefaultBrowserRedirectorHTML]
+@="Web document"
+"AppUserModelId"="DefaultBrowserRedirector"
+
+[HKEY_CURRENT_USER\Software\Classes\DefaultBrowserRedirectorHTML\Application]
+"AppUserModelId"="DefaultBrowserRedirector"
+"ApplicationName"="Default browser redirector"
+"ApplicationIcon"="%SystemRoot%\\System32\\shell32.dll,13"
+"ApplicationDescription"="Default browser redirector."
+"ApplicationCompany"="Default browser redirector"
+
+[HKEY_CURRENT_USER\Software\Classes\DefaultBrowserRedirectorHTML\DefaultIcon]
+@="%SystemRoot%\\System32\\shell32.dll,13"
+
+[HKEY_CURRENT_USER\Software\Classes\DefaultBrowserRedirectorHTML\shell]
+
+[HKEY_CURRENT_USER\Software\Classes\DefaultBrowserRedirectorHTML\shell\open]
+
+[HKEY_CURRENT_USER\Software\Classes\DefaultBrowserRedirectorHTML\shell\open\command]
+@="pyw -c \"exec('import os\\nimport subprocess\\nsubprocess.Popen([\\\"pyw\\\", os.path.expandvars(\\\"%%AppData%%\\\\Default browser redirector\\\\default_browser_redirector.pyw\\\"), \\\"%1\\\"], creationflags=subprocess.CREATE_NO_WINDOW)')\""

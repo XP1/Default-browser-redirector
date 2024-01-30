@@ -1,0 +1,62 @@
+{
+    "opera": {
+        "path": "R:\\Program Files\\Opera\\launcher.exe",
+        "arguments": "--disable-update --start-maximized --allow-outdated-plugins --enable-easy-off-store-extension-install --save-page-as-mhtml"
+    },
+    "vivaldi": {
+        "path": "R:\\Program Files\\Vivaldi\\Application\\vivaldi.exe",
+        "arguments": "--disable-update --start-maximized --allow-outdated-plugins --enable-easy-off-store-extension-install --save-page-as-mhtml",
+        "rules": [
+            "github.com",
+            "stackoverflow.com",
+            "twitch.tv",
+            {"regex": "://(.*\\.)?ups\\.com/"},
+            "zillow.com"
+        ]
+    },
+    "chrome": {
+        "path": "R:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "arguments": "--disable-update --start-maximized --allow-outdated-plugins --save-page-as-mhtml",
+        "rules": [
+            {
+                "text": "test.tld",
+                "arguments": ["--profile-directory=Profile 12"]
+            }
+        ]
+    },
+    "firefox": {
+        "path": "R:\\Program Files\\Mozilla Firefox\\firefox.exe",
+        "rules": [
+            {
+                "text": "firefox.com",
+                "arguments": ["-new-instance", "-P", "default"],
+                "clipboard": true
+            }
+        ]
+    },
+    "thorium": {
+        "path": "%LocalAppData%\\Thorium\\Application\\thorium.exe",
+        "arguments": "--disable-update --start-maximized --allow-outdated-plugins --save-page-as-mhtml",
+        "rules": [
+            {
+                "regex": {"pattern": "discord\\.com", "flags": ["IGNORECASE"]},
+                "arguments": "--incognito --new-window"
+            },
+            {"regex": "public\\.tld"},
+            {
+                "regex": {"pattern": "Private\\.tld", "flags": ["IGNORECASE", "DOTALL"]},
+                "arguments": "--incognito --new-window"
+            }
+        ]
+    },
+    "edge": {
+        "path": "%ProgramFiles(x86)%\\Microsoft\\Edge\\Application\\msedge.exe",
+        "arguments": "--disable-update --allow-outdated-plugins --save-page-as-mhtml"
+    },
+    "clipboard": {
+        "clipboard": true,
+        "rules": [
+            "clip.me"
+        ]
+    }
+}
