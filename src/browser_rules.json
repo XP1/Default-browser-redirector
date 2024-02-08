@@ -10,7 +10,7 @@
             "github.com",
             "stackoverflow.com",
             "twitch.tv",
-            {"regex": "://(.*\\.)?ups\\.com/"},
+            {"regex": ":/*(.*\\.)?ups\\.com"},
             "zillow.com"
         ]
     },
@@ -39,7 +39,7 @@
         "arguments": "--disable-update --start-maximized --allow-outdated-plugins --save-page-as-mhtml",
         "rules": [
             {
-                "regex": {"pattern": "discord\\.com", "flags": ["IGNORECASE"]},
+                "regex": {"pattern": ":/*(.*\\.)?discord(app)?\\.com", "flags": ["IGNORECASE"]},
                 "arguments": "--incognito --new-window"
             },
             {"regex": "public\\.tld"},
